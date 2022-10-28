@@ -1,0 +1,9 @@
+.footer {
+	background-color: var(--color-blue-light);
+	font-size: 16px;
+	color: var(--color-white);
+	// .footer__body
+	&__body {
+		padding: 24px 0px;
+	}
+}

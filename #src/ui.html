@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"UI"
+})
+<body>
+    <style>
+        .ui-header {
+            color: #ffffff;
+            background-color: #818181;
+        }
+        .ui-sidebar {
+            flex: 0 0 300px;
+            background-color: #034A66;
+        }
+        .ui-sidebar__body {
+            position: sticky;
+            top: 24px;
+            left: 0;
+            right: 0;
+            display: block;
+            height: calc(100vh - 48px);
+            overflow-y: auto;
+        }
+        .ui-sidebar__body ul li {
+            list-style: none;
+            margin: 0px 0px 10px 0px;
+        }
+        .ui-sidebar__body ul li a {
+            color: #f2f2f2;
+        }
+        .ui-sidebar__body ul li a:hover {
+            color: #f9b974;
+        }
+        .ui-content > div {
+            padding: 24px 16px 48px 16px;
+        }
+        .ui-content > div:nth-child(odd) {
+            background-color: #f4f4f4;
+        }
+        .ui-content > div > h2 {
+            font-size: 32px;
+            margin: 0px 0px 30px 0px;
+            color: #c47a2c;
+            text-transform: uppercase;
+        }
+    </style>
+    <div class="wrapper">
+        <main class="page">
+            <div class="ui-header d-flex align-items-center p-3">
+                <a href="index.html" class="logo">
+                    <img class="img-fluid" src="./img/" alt="">
+                </a>
+                <h1 class="fs-1 font-bold text-center flex-grow-1">UI Fin</h1>
+            </div>
+            <div class="d-flex">
+                <aside class="ui-sidebar p-3">
+                    <div class="ui-sidebar__body">
+                        <ul class="m-0 p-0">
+                            <li><a href="#title">Заголовки</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <div class="ui-content flex-grow-1">
+                    <div id="title">
+                        <h2>Заголовки (h1, h1_white, h1_gold,... h6)</h2>
+                        <h1 class="h1">Заголовок H1</h1>
+                        <h1 class="h1 h1_white">Заголовок H1 (белый)</h1>
+                        <h1 class="h1 h1_gold">Заголовок H1 (золотой)</h1>
+                        <h2 class="h2">Заголовок H2</h2>
+                        <h2 class="h2 h2_white">Заголовок H2 (белый)</h2>
+                        <h2 class="h2 h2_gold">Заголовок H2 (золотой)</h2>
+                        <h3 class="h3">Заголовок H3</h3>
+                        <h3 class="h3 h3_white">Заголовок H3 (белый)</h3>
+                        <h3 class="h3 h3_gold">Заголовок H3 (золотой)</h3>
+                        <h4 class="h4">Заголовок H4</h4>
+                        <h4 class="h4 h4_white">Заголовок H4 (белый)</h4>
+                        <h4 class="h4 h4_gold">Заголовок H4 (золотой)</h4>
+                        <h5 class="h5">Заголовок H5</h5>
+                        <h5 class="h5 h5_white">Заголовок H5 (белый)</h5>
+                        <h5 class="h5 h5_gold">Заголовок H5 (золотой)</h5>
+                        <h6 class="h6">Заголовок H6</h6>
+                        <h6 class="h6 h6_white">Заголовок H6 (белый)</h6>
+                        <h6 class="h6 h6_gold">Заголовок H6 (золотой)</h6>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    @@include('_js.html',{})
+</body>
+</html>

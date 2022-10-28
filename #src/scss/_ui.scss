@@ -1,0 +1,53 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 24px;
+  color: var(--color-black);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.h1_white,
+.h2_white,
+.h3_white,
+.h4_white,
+.h5_white,
+.h6_white {
+  color: var(--color-white);
+}
+
+.h1_gold,
+.h2_gold,
+.h3_gold,
+.h4_gold,
+.h5_gold,
+.h6_gold {
+  color: var(--color-gold);
+}
+
+.h1 {
+  font-size: 32px;
+}
+
+.h2 {
+  font-size: 28px;
+}
+
+.h3 {
+  font-size: 24px;
+}
+
+.h4 {
+  font-size: 20px;
+}
+
+.h5 {
+  font-size: 18px;
+}
+
+.h6 {
+  font-size: 16px;
+}
