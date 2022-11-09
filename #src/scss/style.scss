@@ -3,14 +3,12 @@
 @import "mixins";
 
 :root {
+  --color-blue: #393185;
+  --color-violet: #675DC3;
   --color-white: #ffffff;
-  --color-black: #000000;
-  --color-gold: #c47a2c;
-  --color-gold-light: #f9b974;
-  --color-gray: #d1d2d4;
+  --color-black: #202020;
+  --color-gray: #BABABA;
   --color-gray-dark: #818181;
-  --color-blue: #040926;
-  --color-blue-light: #034A66;
   --color-red: #D24344;
   --color-green: #48B16E;
   --color-orange: #F9B974;
@@ -40,7 +38,7 @@ $mainColor: var(--color-black);
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
 body {
-  background-color: var(--color-white);
+  background-color: #FAFAFA;
   color: $mainColor;
 
   &._lock {
@@ -82,11 +80,6 @@ body {
 }
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
-.typetitle {
-  margin-bottom: 35px;
-  font-size: 60px;
-  color: #393185;
-}
 .cursor {
   display: inline-block;
   background-color: rgba(57, 49, 133, 0.5);
@@ -94,13 +87,80 @@ body {
   width: 3px;
   animation: blink 1s infinite;
 }
+
 .cursor.typing {
   animation: none;
 }
+
 @keyframes blink {
   0%  { background-color: rgba(57, 49, 133, 0.5); }
   49% { background-color: rgba(57, 49, 133, 0.5); }
   50% { background-color: transparent; }
   99% { background-color: transparent; }
   100%  { background-color: rgba(57, 49, 133, 0.5); }
+}
+
+.main-block {
+  padding: 100px 0px;
+
+  // .main-block__body
+  &__body {
+
+  }
+  // .main-block__title
+  &__title {
+    @include adaptiv-value("margin-bottom", 60, 30, 1);
+    @include adaptiv-value("font-size", 60, 30, 1);
+    color: var(--color-blue);
+    font-weight: 600;
+  }
+
+  // .main-block__text
+  &__text {
+    width: 100%;
+    max-width: 660px;
+    @include adaptiv-value("margin-bottom", 60, 30, 1);
+    font-size: 20px;
+    color: var(--color-black);
+  }
+}
+
+.container {
+}
+
+.typetitle {
+}
+
+.typed-text {
+}
+
+.cursor {
+}
+
+.button {
+}
+
+.numbers {
+  padding: 80px 0px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+
+  // .numbers__title
+  &__title {
+    @include adaptiv-value("margin-bottom", 60, 30, 1);
+    @include adaptiv-value("font-size", 40, 25, 1);
+  }
+}
+
+.item-numbers {
+  // .item-numbers__count
+  &__count {
+    margin: 0px 0px 5px 0px;
+    @include adaptiv-value("font-size", 44, 30, 1);
+  }
+
+  // .item-numbers__text
+  &__text {
+    font-size: 18px;
+  }
 }
