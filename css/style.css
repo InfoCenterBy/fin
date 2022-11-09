@@ -55,7 +55,7 @@ body {
 
 body {
   line-height: 1.4;
-  font-family: "Inter", sans-serif;
+  font-family: "Raleway", sans-serif;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -64,7 +64,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Inter", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: inherit;
 }
 
@@ -465,6 +465,8 @@ body._lock {
 .footer-top__title {
   margin: 0px 0px 34px 0px;
   font-size: 20px;
+  color: var(--color-gray);
+  text-transform: uppercase;
 }
 
 .footer-top__list li:not(:last-child) {
