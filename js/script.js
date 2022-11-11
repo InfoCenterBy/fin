@@ -210,21 +210,8 @@ function documentActions(e) {
     const subMenuId = targetElement.dataset.parent || targetElement.parentElement.dataset.parent;
     const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
     if (subMenu) {
-      const activeLink = document.querySelector('._sub-menu-active');
-      const activeBlock = document.querySelector('._sub-menu-open');
-
-
-      // if (activeLink && activeLink !== targetElement) {
-      //   activeLink.classList.remove('_sub-menu-active');
-      //   activeBlock.classList.remove('_sub-menu-open');
-      //   document.documentElement.classList.remove('sub-menu-open');
-      // }
       document.documentElement.classList.toggle('sub-menu-open');
-      // targetElement.classList.toggle('_sub-menu-active');
       subMenu.classList.toggle('_sub-menu-open');
-
-    } else {
-      console.log('Ой ой, нет такого подменю :(')
     }
     e.preventDefault();
   }
@@ -241,7 +228,6 @@ function documentActions(e) {
     }
   }
 }
-
 
 let bodyLockStatus = true;
 let bodyLockToggle = (delay = 500) => {
@@ -276,11 +262,6 @@ let bodyLock = (delay = 500) => {
     }, delay);
   }
 }
-
-
-const submenuButtonBack = document.querySelector(".submenu-header__back");
-// submenuButtonBack.addEventListener('click', openMenu)
-
 
 
 const typedTextSpan = document.querySelector(".typed-text");
