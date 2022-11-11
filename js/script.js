@@ -196,15 +196,52 @@ if (buttonMenu) {
     if (bodyLockStatus) {
       bodyLockToggle();
       document.documentElement.classList.toggle("menu-open");
-      // if (document.documentElement.classList.contains('catalog-open')) {
-      //   document.documentElement.classList.remove('catalog-open');
-      // }
-      // if (document.documentElement.classList.contains('sub-menu-open')) {
-      //   document.documentElement.classList.remove('sub-menu-open');
-      // }
     }
   });
 };
+
+const buttonSubMenu = document.querySelectorAll('.button-sub-menu');
+const buttonBackMenu = document.querySelectorAll('.submenu-header__back');
+
+document.addEventListener("click", documentActions);
+function documentActions(e) {
+  const targetElement = e.target;
+  if (targetElement.closest('[data-parent]') || targetElement.querySelector('i')) {
+    const subMenuId = targetElement.dataset.parent || targetElement.parentElement.dataset.parent;
+    const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
+    if (subMenu) {
+      const activeLink = document.querySelector('._sub-menu-active');
+      const activeBlock = document.querySelector('._sub-menu-open');
+
+
+      // if (activeLink && activeLink !== targetElement) {
+      //   activeLink.classList.remove('_sub-menu-active');
+      //   activeBlock.classList.remove('_sub-menu-open');
+      //   document.documentElement.classList.remove('sub-menu-open');
+      // }
+      document.documentElement.classList.toggle('sub-menu-open');
+      // targetElement.classList.toggle('_sub-menu-active');
+      subMenu.classList.toggle('_sub-menu-open');
+
+    } else {
+      console.log('Ой ой, нет такого подменю :(')
+    }
+    e.preventDefault();
+  }
+  if (targetElement.closest('.submenu-header__back') || targetElement.closest('.button-menu') || targetElement.closest('.header__overflow')) {
+    document.documentElement.classList.remove('sub-menu-open');
+    document.querySelector('._sub-menu-active') ? document.querySelector('._sub-menu-active').classList.remove('_sub-menu-active') : null;
+    document.querySelector('._sub-menu-open') ? document.querySelector('._sub-menu-open').classList.remove('_sub-menu-open') : null;
+    e.preventDefault();
+  }
+  if (targetElement.closest('.header__overflow')) {
+    if (bodyLockStatus) {
+      bodyLockToggle();
+      document.documentElement.classList.toggle("menu-open");
+    }
+  }
+}
+
 
 let bodyLockStatus = true;
 let bodyLockToggle = (delay = 500) => {
