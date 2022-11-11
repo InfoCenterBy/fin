@@ -454,7 +454,7 @@ body {
 }
 
 .footer {
-  padding: 58px 0px 80px;
+  padding: 60px 0px;
   background-color: var(--color-violet);
   font-size: 16px;
   color: var(--color-white);
@@ -475,7 +475,7 @@ body {
 }
 
 .footer-top {
-  margin: 0px 0px 43px 0px;
+  margin: 0px 0px 45px 0px;
 }
 
 .footer-top__section:not(:last-child) {
@@ -1850,6 +1850,18 @@ body {
   .button-menu span:last-child {
     top: auto;
     bottom: 0;
+  }
+
+  .footer {
+    padding: 30px 0px;
+  }
+
+  .footer-top {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .footer-top__title {
+    margin: 0px 0px 20px 0px;
   }
 }
 
