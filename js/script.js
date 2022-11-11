@@ -190,7 +190,59 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 
 const da = new DynamicAdapt("max");
 da.init();
+let buttonMenu = document.querySelector(".button-menu");
+if (buttonMenu) {
+  buttonMenu.addEventListener("click", function (e) {
+    if (bodyLockStatus) {
+      bodyLockToggle();
+      document.documentElement.classList.toggle("menu-open");
+      // if (document.documentElement.classList.contains('catalog-open')) {
+      //   document.documentElement.classList.remove('catalog-open');
+      // }
+      // if (document.documentElement.classList.contains('sub-menu-open')) {
+      //   document.documentElement.classList.remove('sub-menu-open');
+      // }
+    }
+  });
+};
 
+let bodyLockStatus = true;
+let bodyLockToggle = (delay = 500) => {
+  if (document.documentElement.classList.contains('lock')) {
+    bodyUnlock(delay);
+  } else {
+    bodyLock(delay);
+  }
+}
+let bodyUnlock = (delay = 500) => {
+  let body = document.querySelector("body");
+  if (bodyLockStatus) {
+    setTimeout(() => {
+      body.style.paddingRight = '0px';
+      document.documentElement.classList.remove("lock");
+    }, delay);
+    bodyLockStatus = false;
+    setTimeout(function () {
+      bodyLockStatus = true;
+    }, delay);
+  }
+}
+let bodyLock = (delay = 500) => {
+  let body = document.querySelector("body");
+  if (bodyLockStatus) {
+    body.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+    document.documentElement.classList.add("lock");
+
+    bodyLockStatus = false;
+    setTimeout(function () {
+      bodyLockStatus = true;
+    }, delay);
+  }
+}
+
+
+const submenuButtonBack = document.querySelector(".submenu-header__back");
+// submenuButtonBack.addEventListener('click', openMenu)
 
 
 
