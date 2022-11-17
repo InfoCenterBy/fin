@@ -161,7 +161,7 @@ gulp.task('svgSprite', function () {
 })
 
 gulp.task('deploy', function () {
-	return gulp.src("./article-portal/**/*")
+	return gulp.src("./fin/**/*")
 	  .pipe(deploy())
  });
 

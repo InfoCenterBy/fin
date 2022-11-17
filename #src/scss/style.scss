@@ -3,9 +3,10 @@
 @import "mixins";
 
 :root {
-  --color-blue: #393185;
-  --color-violet: #675DC3;
+  --color-violet: #393185;
+  --color-violet-light: #675DC3;
   --color-white: #ffffff;
+  --color-white-bg: #fafafa;
   --color-black: #202020;
   --color-gray: #BABABA;
   --color-gray-dark: #818181;
@@ -16,7 +17,7 @@
 }
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontFamily: 'Inter', sans-serif;
+$fontFamily: 'Raleway', sans-serif;
 $fontSize: 16;
 //</Шрифт по умолчанию>==========================================================================================
 
@@ -38,12 +39,13 @@ $mainColor: var(--color-black);
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
 body {
-  background-color: #FAFAFA;
+  background-color: var(--color-white-bg);
   color: $mainColor;
-
-  &._lock {
-    overflow: hidden;
-  }
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+.lock body {
+  overflow: hidden;
+  touch-action: none;
 }
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container {
@@ -101,8 +103,7 @@ body {
 }
 
 .main-block {
-  padding: 100px 0px;
-
+  @include adaptiv-value("margin-top", 130, 50, 1);
   // .main-block__body
   &__body {
 
@@ -110,8 +111,8 @@ body {
   // .main-block__title
   &__title {
     @include adaptiv-value("margin-bottom", 60, 30, 1);
-    @include adaptiv-value("font-size", 60, 30, 1);
-    color: var(--color-blue);
+    @include adaptiv-value("font-size", 60, 28, 1);
+    color: var(--color-violet);
     font-weight: 600;
   }
 
@@ -125,24 +126,9 @@ body {
   }
 }
 
-.container {
-}
-
-.typetitle {
-}
-
-.typed-text {
-}
-
-.cursor {
-}
-
-.button {
-}
-
 .numbers {
   padding: 80px 0px;
-  background-color: var(--color-blue);
+  background-color: var(--color-violet);
   color: var(--color-white);
 
   // .numbers__title
@@ -162,5 +148,33 @@ body {
   // .item-numbers__text
   &__text {
     font-size: 18px;
+  }
+}
+
+.cooperation {
+  // .cooperation__content
+  &__content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // .cooperation__gif
+  &__gif {
+    padding: 0px 0px 0px 30px;
+  }
+  
+  @media (max-width: $md3+px) {
+    &__gif {
+      text-align: center;
+    }
+  }
+}
+
+.main-questions {
+  // .main-questions__accordion
+  &__accordion {
+    margin: 24px 0px 0px 0px;
   }
 }
