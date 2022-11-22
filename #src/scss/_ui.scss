@@ -129,11 +129,13 @@
 }
 
 .item-accordion {
-  border: 1px solid var(--color-gray);
+  background: var(--color-violet-gray);
   border-radius: 20px;
-
   &:not(:last-child) {
     margin: 0px 0px 20px 0px;
+  }
+  &:hover{
+    background: #3931851a;
   }
 
   &__button {
@@ -190,13 +192,89 @@
   &__body {
     padding: 0px 20px 20px;
 
-    @media (max-width: $md4+px) {
-      padding: 16px 8px 8px;
-    }
+    // @media (max-width: $md4+px) {
+    //   padding: 16px 8px 8px;
+    // }
   }
 
 
   &:hover {
     border-color: var(--color-violet);
+  }
+}
+
+.services{
+  // *{
+  //   outline: 1px solid red;
+  // }
+  .services-wrapper{
+    display: flex;
+    flex-direction: row;
+    background: rgba(57, 49, 133, 0.03);
+    border-radius: 0px 50px;
+    max-height: 315px;
+    // *{
+    //   outline: 1px solid red;
+    // }
+    .services-tabs{
+      display: flex;
+      flex-direction: column;
+      background: var(--color-violet);
+      border-radius: 0px 50px;
+      padding: 35px 0px;
+      max-width: 358px;
+      width: 100%;
+      align-items: flex-start;
+      max-height: 315px;
+      .button {
+        display: flex;
+        color: var(--color-white);
+        font-style: normal;
+        font-weight: 500;
+        border: 1px solid var(--color-white);
+        background-color: transparent;
+        margin: 5px 32px;
+        padding: 10px 20px;
+        @include adaptiv-value("font-size", 16, 8, 1);
+        // max-width: 294px;
+        // min-width: 154px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &:hover {
+          color: var(--color-violet);
+          background-color: var(--color-white-bg);
+        }
+    
+      }
+      .tab {
+        cursor: pointer;
+      }
+      .tab-active {
+        background-color: var(--color-white-bg);
+        color: var(--color-violet);
+        pointer-events: none;
+      }
+    }
+
+    &__content{
+      @include adaptiv-value("margin-left", 106, 10, 1);
+      display: flex;
+      align-items: center;
+      .content {
+        display: none;
+        p{
+          max-width: 814px;
+        }
+        .link-all {
+          @include adaptiv-value("font-size", 18, 8, 1);
+          color: var(--color-violet);
+          font-weight: 500;
+        }
+      }
+      .content-active {
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
 }
