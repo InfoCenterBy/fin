@@ -204,18 +204,13 @@
 }
 
 .services{
-  // *{
-  //   outline: 1px solid red;
-  // }
   .services-wrapper{
     display: flex;
     flex-direction: row;
-    background: rgba(57, 49, 133, 0.03);
+    background: var(--color-violet-gray);
     border-radius: 0px 50px;
-    max-height: 315px;
-    // *{
-    //   outline: 1px solid red;
-    // }
+    @include adaptiv-value("max-height", 315, 698, 1);
+    @include adaptiv-value("max-width", 1367,329, 1);
     .services-tabs{
       display: flex;
       flex-direction: column;
@@ -225,7 +220,7 @@
       max-width: 358px;
       width: 100%;
       align-items: flex-start;
-      max-height: 315px;
+      @include adaptiv-value("max-height", 315, 698, 1);;
       .button {
         display: flex;
         color: var(--color-white);
@@ -235,7 +230,8 @@
         background-color: transparent;
         margin: 5px 32px;
         padding: 10px 20px;
-        @include adaptiv-value("font-size", 16, 8, 1);
+        min-width: 140px;
+        @include adaptiv-value("font-size", 16, 14, 1);
         // max-width: 294px;
         // min-width: 154px;
         justify-content: flex-start;
@@ -257,18 +253,30 @@
     }
 
     &__content{
-      @include adaptiv-value("margin-left", 106, 10, 1);
+      @include adaptiv-value("margin-left", 106, 20, 1);
+      @include adaptiv-value("margin-top", 30, 25, 1);
       display: flex;
       align-items: center;
       .content {
         display: none;
+        padding-bottom: 40px;
         p{
           max-width: 814px;
+          @include adaptiv-value("font-size", 18, 13, 1);
         }
-        .link-all {
-          @include adaptiv-value("font-size", 18, 8, 1);
-          color: var(--color-violet);
-          font-weight: 500;
+        .service-links-scope{
+          display: grid;
+          gap: 20px 50px;
+          grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
+          // @include adaptiv-value("margin-right", 0, 11, 1);
+          .link-all {
+            @include adaptiv-value("font-size", 18, 11, 1);
+            color: var(--color-violet);
+            font-weight: 500;
+            i{
+              margin-left: 3px !important;
+            }
+          }
         }
       }
       .content-active {

@@ -1,0 +1,34 @@
+
+@media only screen and (max-width : 780px) {
+     .services{
+          .services-wrapper{
+            flex-direction: column;
+            max-width: 389px;
+            min-height: 600px;
+            padding-bottom: 40px;
+            max-height: 670px;
+            .services-tabs{
+              display: flex;
+              flex-direction: column;
+              padding: 27.5px 0px;
+              max-width: 100%;
+              .button {
+                display: flex;
+                margin: 5px 20px;
+               }
+          }
+            &__content{
+              .content {
+               padding-bottom: 0;
+                    p{
+                         max-width: 310px;
+                    }
+                }
+              }
+              .content-active {
+                display: flex;
+                flex-direction: column;
+              }
+            }
+          }
+}
