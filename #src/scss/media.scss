@@ -24,6 +24,9 @@
                          max-width: 310px;
                     }
                 }
+                .service-links-scope{
+                  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+                }
               }
               .content-active {
                 display: flex;

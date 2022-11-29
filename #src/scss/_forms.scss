@@ -207,6 +207,8 @@
     border: 1px solid var(--color-gray);
     background-color: transparent;
     border-radius: 4px;
+    // max-height: 300px;
+    // resize: vertical;
 
     &:focus {
       outline: 2px solid #E0DDFF;
@@ -230,6 +232,12 @@
   // .feedback-form__button
   &__button {
     margin: 40px 0px 0px 0px;
+    button{
+      font-weight: 500;
+      font-size: 18px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
 
   // @media (max-width: $md3+px) {

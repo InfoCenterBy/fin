@@ -39,6 +39,14 @@
 		    margin: 0px 0px 30px 0px;
 		}
 	}
+	.footer-contact{
+		ul li:last-child{
+			max-width: 133px;
+		}
+		ul li:last-child:hover{
+			text-decoration: underline;
+		}
+	}
 
 	// .footer-top__title
 	&__title {
@@ -53,6 +61,7 @@
 		li:not(:last-child) {
 		    margin: 0px 0px 15px 0px;
 		}
+		
 
 		a {
 			font-size: 16px;
@@ -81,6 +90,13 @@
 		&:hover {
 			transform: translateY(-3px);
 		}
+	}
+	a svg path{
+		transition: all ease-in .2s;
+	}
+
+	a:hover svg path{
+		fill: var(--color-gray);
 	}
 }
 
