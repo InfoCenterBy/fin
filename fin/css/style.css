@@ -580,6 +580,11 @@ body {
 .services h2 {
   font-size: 20px;
   line-height: 23px;
+  cursor: pointer;
+}
+
+.services .reviews__text {
+  cursor: pointer;
 }
 
 .services .reviews__text h3 {
@@ -590,6 +595,7 @@ body {
 
 .services .reviews__text span {
   font-weight: 400;
+  cursor: pointer;
 }
 
 .header {
@@ -1310,6 +1316,10 @@ body {
 
 .main-questions .link-all:hover {
   color: var(--color-violet-light);
+}
+
+.fade {
+  cursor: pointer;
 }
 
 .modal-header {

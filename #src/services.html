@@ -13,7 +13,7 @@
                     <div class="modal-dialog modal-dialog-centered">
                          <div class="modal-content">
                               <div class="modal-header">
-                                   <h5 class="modal-title ms-0" id="formModalLabel">
+                                   <h5 class="modal-title ms-0 ps-1" id="formModalLabel">
                                         Оставьте заявку
                                    </h5>
                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -78,7 +78,7 @@
                <!-- modal -->
                <section class="section container mt-4" style="margin-bottom: 0;">
                     <div class="links-line">
-                         <a href="">Главная</a>
+                         <a href="main.html">Главная</a>
                          <span>/</span>
                          <a href="">Услуги</a>
                          <span class="links-line__active">/</span>
@@ -91,8 +91,9 @@
                     </div>
                     <div class="reviews__body w-100">
                          <div class="row justify-content-between">
-                              <div class="reviews__content pt-4 ps-3 pb-3 pe-5 col-md-6 mt-3">
-                                   <div class="reviews__block d-flex flex-xd-row flex-xs-column">
+                              <div class="reviews__content pt-4 ps-3 pb-3 pe-5 col-md-6 mt-3" type="button"
+                                   data-bs-toggle="modal" data-bs-target="#formModal">
+                                   <div id="1" class="reviews__block d-flex flex-xd-row flex-xs-column">
                                         <div class="reviews__text col mt-2 ms-2">
                                              <h2>Постановка бухгалтерского и налогового учета</h2>
                                              <div class="w-100 jusify-content-between row mt-4">
@@ -117,15 +118,16 @@
                                              </p>
                                              <div id="links" class="mt-5">
                                                   <div class="">
-                                                       <a type="button" data-bs-toggle="modal"
-                                                            data-bs-target="#formModal" class="link-all">Оставить
+                                                       <a class="link-all" type="button" data-bs-toggle="modal"
+                                                            data-bs-target="#formModal">Оставить
                                                             заявку<i class="bi bi-arrow-up-right ms-3"></i></a>
                                                   </div>
                                              </div>
                                         </div>
                                    </div>
                               </div>
-                              <div class="reviews__content pt-4 ps-3 pb-3 pe-5 col-md-6 mt-3">
+                              <div id="2" class="reviews__content pt-4 ps-3 pb-3 pe-5 col-md-6 mt-3" type="button"
+                                   data-bs-toggle="modal" data-bs-target="#formModal">
                                    <div class="reviews__block d-flex flex-xd-row flex-xs-column">
                                         <div class="reviews__text col mt-2 ms-2">
                                              <h2>Комплексный бухгалтерский аутсорсинг</h2>
@@ -159,7 +161,8 @@
                                         </div>
                                    </div>
                               </div>
-                              <div class="reviews__content pt-4 ps-3 pb-3 pe-5 col-md-6 mt-3">
+                              <div id="3" class="reviews__content pt-4 ps-3 pb-3 pe-5 col-md-6 mt-3" type="button"
+                                   data-bs-toggle="modal" data-bs-target="#formModal">
                                    <div class="reviews__block d-flex flex-xd-row flex-xs-column">
                                         <div class="reviews__text col mt-2 ms-2">
                                              <h2>Услуги главного бухгалтера</h2>
@@ -193,7 +196,8 @@
                                         </div>
                                    </div>
                               </div>
-                              <div class="reviews__content pt-4 ps-3 pb-3 pe-5 col-md-6 mt-3">
+                              <div id="4" class="reviews__content pt-4 ps-3 pb-3 pe-5 col-md-6 mt-3" type="button"
+                                   data-bs-toggle="modal" data-bs-target="#formModal">
                                    <div class="reviews__block d-flex flex-xd-row flex-xs-column">
                                         <div class="reviews__text col mt-2 ms-2">
                                              <h2>Экспертиза бухгалтерского учета</h2>
@@ -228,7 +232,8 @@
                                         </div>
                                    </div>
                               </div>
-                              <div class="reviews__content pt-4 ps-3 pb-3 pe-5 col-md-6 mt-3">
+                              <div id="5" class="reviews__content pt-4 ps-3 pb-3 pe-5 col-md-6 mt-3" type="button"
+                                   data-bs-toggle="modal" data-bs-target="#formModal">
                                    <div class="reviews__block d-flex flex-xd-row flex-xs-column">
                                         <div class="reviews__text col mt-2 ms-2">
                                              <h2>Расчет заработной платы</h2>
@@ -261,7 +266,8 @@
                                         </div>
                                    </div>
                               </div>
-                              <div class="reviews__content pt-4 ps-3 pb-3 pe-5 col-md-6 mt-3">
+                              <div id="6" class="reviews__content pt-4 ps-3 pb-3 pe-5 col-md-6 mt-3" type="button"
+                                   data-bs-toggle="modal" data-bs-target="#formModal">
                                    <div class="reviews__block d-flex flex-xd-row flex-xs-column">
                                         <div class="reviews__text col mt-2 ms-2">
                                              <h2>Консультирование</h2>
