@@ -140,6 +140,9 @@
   &:hover{
     background: #3931851a;
   }
+  &:nth-child(2n){
+    // margin-left: 25px;
+  }
 
   &__button {
     width: 100%;
@@ -332,6 +335,11 @@
       font-size: 16px;
       font-weight: 400;
     }
+    // ul{
+    //   min-height: 120px;
+    //   max-height: 300px;
+    //   text-overflow: ellipsis;
+    // }
   }
   &__title{
     color: var(--color-gray);
@@ -411,3 +419,26 @@
     }
   }
 }
+
+.faq-block {
+  background-image: url("../img/faq/faq-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1367px;
+  width: 100%;
+  border-radius: 20px;
+  @include adaptiv-value("height", 213, 100, 1);
+  &__text {
+    p{
+      color: var(--color-white);
+      font-size: 18px;
+      max-width: 427px;
+    }
+    
+  }
+  .button {
+    max-width: 427px;
+    width: 100%;
+  }
+}
+

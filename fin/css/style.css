@@ -599,6 +599,27 @@ body {
   cursor: pointer;
 }
 
+.faq-block {
+  background-image: url("../img/faq/faq-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1367px;
+  width: 100%;
+  border-radius: 20px;
+  height: 213px;
+}
+
+.faq-block__text p {
+  color: var(--color-white);
+  font-size: 18px;
+  max-width: 427px;
+}
+
+.faq-block .button {
+  max-width: 427px;
+  width: 100%;
+}
+
 .header {
   background-color: var(--color-violet);
   position: relative;
@@ -1340,6 +1361,13 @@ body {
   padding: 0 0 0 0;
 }
 
+.container-personal {
+  width: 100%;
+  max-width: 1830px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 @media (min-width: 992px) {
   .menu-header {
     display: -webkit-box;
@@ -1535,6 +1563,10 @@ body {
   .links-line a,
   .links-line span {
     font-size: calc(12px + 2 * ((100vw - 320px) / 1070));
+  }
+
+  .faq-block {
+    height: calc(100px + 113 * ((100vw - 320px) / 1070));
   }
 
   .main-block {
