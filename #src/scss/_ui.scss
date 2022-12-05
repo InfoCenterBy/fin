@@ -427,7 +427,9 @@
   max-width: 1367px;
   width: 100%;
   border-radius: 20px;
-  @include adaptiv-value("height", 213, 100, 1);
+  min-height: 213px;
+  padding: 48px 25px 65px 25px;
+  // @include adaptiv-value("height", 213, 100, 1);
   &__text {
     p{
       color: var(--color-white);

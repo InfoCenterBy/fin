@@ -606,7 +606,8 @@ body {
   max-width: 1367px;
   width: 100%;
   border-radius: 20px;
-  height: 213px;
+  min-height: 213px;
+  padding: 48px 25px 65px 25px;
 }
 
 .faq-block__text p {
@@ -1563,10 +1564,6 @@ body {
   .links-line a,
   .links-line span {
     font-size: calc(12px + 2 * ((100vw - 320px) / 1070));
-  }
-
-  .faq-block {
-    height: calc(100px + 113 * ((100vw - 320px) / 1070));
   }
 
   .main-block {
