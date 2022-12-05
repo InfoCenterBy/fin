@@ -441,6 +441,35 @@
   .button {
     max-width: 427px;
     width: 100%;
+    @include adaptiv-value("font-size", 18, 16, 1);
   }
 }
+
+
+
+.how-work {
+		&__card {
+      background: var(--color-violet-gray);
+      border-radius: 20px 0px;
+      max-width: 322px;
+      width: 100%;
+      margin-top: 20px;
+      &:not(:last-child){
+        margin-right: 26px;
+      }
+      p{
+        margin-top: 20px;
+        max-width: 257px;
+      }
+
+      .main-content {
+        &__title {
+          font-size: 20px;
+        }
+    }
+    
+		}
+}
+
+
 

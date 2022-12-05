@@ -619,6 +619,28 @@ body {
 .faq-block .button {
   max-width: 427px;
   width: 100%;
+  font-size: 18px;
+}
+
+.how-work__card {
+  background: var(--color-violet-gray);
+  border-radius: 20px 0px;
+  max-width: 322px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.how-work__card:not(:last-child) {
+  margin-right: 26px;
+}
+
+.how-work__card p {
+  margin-top: 20px;
+  max-width: 257px;
+}
+
+.how-work__card .main-content__title {
+  font-size: 20px;
 }
 
 .header {
@@ -1564,6 +1586,10 @@ body {
   .links-line a,
   .links-line span {
     font-size: calc(12px + 2 * ((100vw - 320px) / 1070));
+  }
+
+  .faq-block .button {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 1070));
   }
 
   .main-block {
