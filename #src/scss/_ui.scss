@@ -454,9 +454,9 @@
       max-width: 322px;
       width: 100%;
       margin-top: 20px;
-      &:not(:last-child){
-        margin-right: 26px;
-      }
+      // &:not(:last-child){
+      //   margin-right: 26px;
+      // }
       p{
         margin-top: 20px;
         max-width: 257px;
@@ -465,11 +465,81 @@
       .main-content {
         &__title {
           font-size: 20px;
+          margin-top: 10px;
         }
     }
     
 		}
+    .how-work-wrapper{
+      display: grid;
+      grid-template-columns: repeat( auto-fill, minmax(300px, 1fr) );
+      column-gap: 26px;
+      width: 100%;
+    }
+    // @media only screen and (max-width : 1300px) {
+    //   .how-work-wrapper{
+    //     grid-template-columns: repeat( auto-fill, minmax(232px, 1fr) );
+    //     row-gap: 26px;
+    //   }
+    // }
+    .test{
+      outline: 1px solid red;
+    }
 }
 
+.benefits{
 
+  .main-content {
+    margin: 0;
+		&__title {
+      @include adaptiv-value("font-size", 32, 26, 1);
+		}
+  }
+  &__card{
+    margin-top: 40px;
+    width: 100%;
+    @include adaptiv-value("max-width", 438, 322, 1);
+    // max-width: 438px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    p{
+      width: 100%;
+      @include adaptiv-value("margin-top", 20, 10, 1);
+      // @include adaptiv-value("max-width", 380, 294, 1);
+      max-width: 380px;
+    }
+  }
+  @media only screen and (max-width : 1300px){
+    .benefits__card{
+      @include adaptiv-value("max-width", 410, 100, 1);
+    }
+  }
+  @media only screen and (max-width : 800px){
+    .benefits__card{
+      @include adaptiv-value("max-width", 410, 400, 1);
+    }
+  }
+  &__card > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 438px;
+    // @include adaptiv-value("max-width", 438, 322, 1);
+    background: var(--color-violet-gray);
+    border-radius: 20px;
+    padding: 16px 20px 16px 20px;
+    span{
+      font-weight: 600;
+      color: var(--color-violet);
+      @include adaptiv-value("font-size", 20, 16, 1);
+    }
+    img{
+      max-width: 34px;
+      width: 100%;
+    }
+  }
+}
 
