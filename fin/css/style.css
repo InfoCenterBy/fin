@@ -1523,6 +1523,18 @@ body {
   font-size: 15px;
 }
 
+.about .about-img-main img:nth-child(2) {
+  display: none;
+}
+
+.about .about-img-main:hover img:nth-child(1) {
+  display: none;
+}
+
+.about .about-img-main:hover img:nth-child(2) {
+  display: block;
+}
+
 .team-swiper .swiper-button-prev,
 .team-swiper .swiper-button-next {
   color: var(--color-white);
@@ -1545,6 +1557,47 @@ body {
 
 .page-404 {
   padding: 100px 0 100px 0;
+}
+
+.contact-block .contact-info__title {
+  color: var(--color-gray);
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.contact-block .contact-info p {
+  color: var(--color-black);
+  font-weight: 400;
+  font-size: 18px;
+  max-width: 322px;
+  margin-top: 10px;
+}
+
+.contact-block .contact-info .social-links {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.contact-block .contact-info .social-links li {
+  list-style: none;
+}
+
+.contact-block .contact-info .social-links li svg path {
+  fill: var(--color-violet);
+}
+
+.contact-block .contact-info a {
+  color: var(--color-black);
+}
+
+.contact-map {
+  max-width: 630px;
+  width: 100%;
+}
+
+.contact-map img {
+  width: 100%;
 }
 
 @media (min-width: 992px) {
