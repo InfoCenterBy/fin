@@ -1623,6 +1623,63 @@ body {
   font-size: 16px;
 }
 
+.cookies .cookies-close {
+  padding-left: 10px;
+}
+
+.cookies .cookies-main {
+  padding-right: 5px;
+  border-right: 1px solid var(--color-violet-light);
+}
+
+.services-main .services-block {
+  background: var(--color-violet-gray);
+  border-radius: 20px;
+  margin: 20px 0;
+  padding: 30px;
+  cursor: pointer;
+}
+
+.services-main .services-block__title {
+  color: var(--color-violet);
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.services-main .services-block__text {
+  color: var(--color-black);
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.services-main .services-block .link-all {
+  opacity: 0;
+  -webkit-transition: all ease-in 0.3s;
+  -o-transition: all ease-in 0.3s;
+  transition: all ease-in 0.3s;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.services-main .services-block .link-all i:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.services-main .services-block .link-all {
+  color: var(--color-violet-light);
+}
+
+.services-main .services-block:hover {
+  background: rgba(57, 49, 133, 0.1019607843);
+}
+
+.services-main .services-block:hover .link-all {
+  opacity: 1;
+}
+
 @media (min-width: 992px) {
   .menu-header {
     display: -webkit-box;
@@ -1875,6 +1932,18 @@ body {
   .item-numbers__count {
     font-size: calc(30px + 14 * ((100vw - 320px) / 1070));
   }
+
+  .services-main .services-block__title {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 1070));
+  }
+
+  .services-main .services-block__text {
+    font-size: calc(14px + 4 * ((100vw - 320px) / 1070));
+  }
+
+  .services-main .services-block .link-all {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 1070));
+  }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -2111,6 +2180,12 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 780px) {
+  .services-main .services-block .link-all {
+    opacity: 1;
   }
 }
 

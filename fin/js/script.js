@@ -402,37 +402,13 @@ function getCookie(name) {
   return null;
 }
 
-function eraseCookie(name) {   
-  document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+function openInNewTab(href) {
+  Object.assign(document.createElement('a'), {
+    target: '_blank',
+    rel: 'noopener noreferrer',
+    href: href,
+  }).click();
 }
-
-function cookieConsent() {
-  if (!getCookie('allowCookies')) {
-      $('.toast').toast('show')
-  }
-}
-
-$('#btnDeny').click(()=>{
-  eraseCookie('allowCookies')
-  $('.toast').toast('hide')
-})
-
-$('#btnAccept').click(()=>{
-  setCookie('allowCookies','1',7)
-  $('.toast').toast('hide')
-})
-
-// load
-cookieConsent()
-
-// for demo / testing only
-$('#btnReset').click(()=>{
-  // clear cookie to show toast after acceptance
-  eraseCookie('allowCookies')
-  $('.toast').toast('show')
-})
-
-
 
 
 
