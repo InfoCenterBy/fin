@@ -1600,6 +1600,29 @@ body {
   width: 100%;
 }
 
+.cookies {
+  margin: 0;
+  min-height: 67px;
+}
+
+.cookies .alert {
+  background: rgba(57, 49, 133, 0.1);
+  border-radius: 20px;
+  padding: 12px 20px;
+}
+
+.cookies .button {
+  max-width: 155px;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 30px;
+}
+
+.cookies span {
+  font-weight: 400;
+  font-size: 16px;
+}
+
 @media (min-width: 992px) {
   .menu-header {
     display: -webkit-box;
