@@ -210,12 +210,9 @@ function getCookie(name) {
   return null;
 }
 
-function openInNewTab(href) {
-  Object.assign(document.createElement('a'), {
-    target: '_blank',
-    rel: 'noopener noreferrer',
-    href: href,
-  }).click();
+
+function uploadFile(target) {
+  document.getElementById("file-name").innerHTML = target.files[0].name;
 }
 
 
