@@ -1680,6 +1680,14 @@ body {
   opacity: 1;
 }
 
+.vacancy-placeholder span {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--color-gray);
+  font-size: 24px;
+}
+
 @media (min-width: 992px) {
   .menu-header {
     display: -webkit-box;
@@ -1943,6 +1951,10 @@ body {
 
   .services-main .services-block .link-all {
     font-size: calc(16px + 2 * ((100vw - 320px) / 1070));
+  }
+
+  .vacancy-placeholder span {
+    font-size: calc(20px + 4 * ((100vw - 320px) / 1070));
   }
 }
 
