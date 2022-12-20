@@ -794,6 +794,12 @@ body {
   }
 }
 
+.questions-accordion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
 .header {
   background-color: var(--color-violet);
   position: relative;
@@ -2385,6 +2391,15 @@ body {
 @media (max-width: 780px) {
   .services-main .services-block .link-all {
     opacity: 1;
+  }
+}
+
+@media (max-width: 740px) {
+  .questions-accordion {
+    grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
