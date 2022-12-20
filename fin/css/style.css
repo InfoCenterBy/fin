@@ -472,12 +472,24 @@ body {
           flex-direction: column;
 }
 
+.reviews {
+  width: 100%;
+}
+
 .reviews__body .main-content__title:first-child {
   font-size: 70px;
 }
 
 .reviews__body .main-content__title:last-child {
   font-size: 30px;
+}
+
+.reviews__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
 }
 
 .reviews__content {
@@ -712,6 +724,80 @@ body {
 .benefits__card > div img {
   max-width: 34px;
   width: 100%;
+}
+
+.logo-wrapper .logo-circle-fill path {
+  fill-opacity: 0.2;
+  -webkit-animation: colorFill 5s infinite;
+          animation: colorFill 5s infinite;
+}
+
+.logo-wrapper .logo-circle-gray path {
+  fill-opacity: 0.2;
+  -webkit-animation: colorGray 5s infinite 10s;
+          animation: colorGray 5s infinite 10s;
+}
+
+@-webkit-keyframes colorGray {
+  0% {
+    fill-opacity: 0.2;
+  }
+
+  50% {
+    fill-opacity: 1;
+  }
+
+  100% {
+    fill-opacity: 0.2;
+  }
+}
+
+@keyframes colorGray {
+  0% {
+    fill-opacity: 0.2;
+  }
+
+  50% {
+    fill-opacity: 1;
+  }
+
+  100% {
+    fill-opacity: 0.2;
+  }
+}
+
+@-webkit-keyframes colorFill {
+  0% {
+    fill-opacity: 1;
+  }
+
+  50% {
+    fill-opacity: 0.2;
+  }
+
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes colorFill {
+  0% {
+    fill-opacity: 1;
+  }
+
+  50% {
+    fill-opacity: 0.2;
+  }
+
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+.questions-accordion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 
 .header {
@@ -1605,7 +1691,7 @@ body {
 }
 
 .cookies .alert {
-  background: var(--color-gray);
+  background: #E7E6EE;
   border-radius: 20px;
   padding: 12px 20px;
 }
@@ -1622,13 +1708,26 @@ body {
   font-size: 16px;
 }
 
-.cookies .cookies-close {
-  padding-left: 15px;
+.cookies .cookies-close .button {
+  max-height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
 }
 
 .cookies .cookies-main {
-  padding-right: 5px;
-  border-right: 1px solid var(--color-violet-light);
+  text-align: left;
+}
+
+.cookies .cookies-main a {
+  color: var(--color-violet-light);
 }
 
 .services-main .services-block {
@@ -2292,6 +2391,21 @@ body {
 @media (max-width: 780px) {
   .services-main .services-block .link-all {
     opacity: 1;
+  }
+}
+
+@media (max-width: 740px) {
+  .questions-accordion {
+    grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .reviews__wrapper {
+    grid-template-columns: 1fr;
   }
 }
 

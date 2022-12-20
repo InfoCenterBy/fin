@@ -75,7 +75,7 @@
                         </ul>
                     </div>
                 </aside>
-                <div class="ui-content flex-grow-1">
+                <label class="ui-content flex-grow-1">
                     <div id="title">
                         <h2>Заголовки (h1, h1_white, h1_gold,... h6)</h2>
                         <h1 class="h1">Заголовок H1</h1>
@@ -460,7 +460,7 @@
                     <!-- cookie -->
                     <section class="section cookies mb-3 container fixed-bottom m-auto">
                         <div class="alert alert-dismissible fade show" role="alert">
-                            <div class="text-center d-flex flex-row align-items-center jusify-content-between">
+                            <div class="text-center d-flex flex-column w-100 align-items-center flex-md-row">
                                 <div class="cookies-main">
                                     <span class="me-4">
                                         Мы используем файлы cookie для улучшения работы сайта. Подробную
@@ -468,18 +468,20 @@
                                         найдете в
                                         <a href="">Политике обработки персональных данных</a>
                                     </span>
-                                    <a href="#" class="button me-4 mt-lg-0 mt-md-2" data-bs-dismiss="alert"
-                                        aria-label="Close">Принять</a>
+
                                 </div>
 
-                                <div class="cookies-close ">
-
-                                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                <div class="cookies-close d-flex flex-row mt-2 mt-md-0">
+                                    <a href="#" class="button me-4 mt-lg-0 mt-md-2" data-bs-dismiss="alert"
+                                        aria-label="Close">Принять</a>
+                                    <a href="#" class="button me-4 mt-lg-0 mt-md-2" data-bs-dismiss="alert"
+                                        aria-label="Close">Отклонить</a>
+                                    <!-- <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" data-bs-dismiss="alert" aria-label="Close">
                                         <path
                                             d="M1.1166 1.15469C1.60476 0.68802 2.39622 0.68802 2.88437 1.15469L9.50049 7.47963L16.1166 1.15469C16.6048 0.68802 17.3962 0.68802 17.8844 1.15469C18.3725 1.62136 18.3725 2.37799 17.8844 2.84466L11.2683 9.1696L17.8844 15.4945C18.3725 15.9612 18.3725 16.7178 17.8844 17.1845C17.3962 17.6512 16.6048 17.6512 16.1166 17.1845L9.50049 10.8596L2.88437 17.1845C2.39622 17.6512 1.60476 17.6512 1.1166 17.1845C0.628449 16.7178 0.628449 15.9612 1.1166 15.4945L7.73272 9.1696L1.1166 2.84466C0.628449 2.37799 0.628449 1.62136 1.1166 1.15469Z"
                                             fill="#393185" />
-                                    </svg>
+                                    </svg> -->
 
                                 </div>
                             </div>
@@ -487,10 +489,49 @@
                         </div>
                     </section>
                     <!-- cookie -->
+                    <!-- shape  -->
+                    <!-- <section class="section" style="margin-left: 50px;">
+                        <input id="testrad" type="radio" value="yes" style="display: none;">
+                        <button class="test" for="testrad">
+                            <div class="test2">
+                                <p>
+                                    <span>Оформите подписку</span>
+                                    <span>на издания</span>
+                                </p>
+                            </div>
+                        </button>
+                    </section> -->
+
+                    <!-- logo  -->
+                    <section class="section">
+                        <div class="logo-wrapper">
+                            <svg width="111" height="111" viewBox="0 0 111 111" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="logo-circle-fill">
+                                <path
+                                    d="M0 55.5C0 24.8482 24.8482 0 55.5 0C86.1518 0 111 24.8482 111 55.5V111H55.5C24.8482 111 0 86.1518 0 55.5Z"
+                                    fill="#393185" />
+
+                            </svg>
+                            <svg width="111" height="111" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="logo-circle-gray">
+                                <path
+                                    d="M0 55.5C0 24.848 24.848 0 55.5 0S111 24.848 111 55.5 86.152 111 55.5 111H0V55.5z"
+                                    fill="#393185" fill-opacity=".2" />
+                            </svg>
+                            <svg width="333" height="111" viewBox="0 0 333 111" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 70C0 31.3401 31.3401 0 70 0H111V111H0V70Z" fill="#393185" />
+                                <rect width="111" height="111" transform="translate(111)" fill="#393185" />
+                                <path d="M222 0H333V41C333 79.6599 301.66 111 263 111H222V0Z" fill="#393185" />
+                            </svg>
+
+                        </div>
+                    </section>
+                    <!-- logo  -->
                     <div class="mb-5"></div>
-                </div>
             </div>
-        </main>
+    </div>
+    </main>
     </div>
     @@include('_js.html',{})
 </body>

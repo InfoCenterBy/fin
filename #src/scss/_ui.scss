@@ -297,7 +297,7 @@
   // *{
   //   outline: 1px solid red;
   // }
-
+    width: 100%;
   &__body {
     .main-content__title:first-child{
       font-size: 70px;
@@ -306,11 +306,22 @@
       font-size: 30px;
     }
   }
+  &__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
+    column-gap: 20px;
+    @media (max-width: 640px) {
+      &{
+        grid-template-columns: 1fr;
+      }
+    }
+  }
   &__content {
     background: var(--color-violet-gray);
     max-width: 786px;
     width: 100%;
+    // @include adaptiv-value("width", 786, 320, 1);
     border-radius: 20px;
     cursor: pointer;
   }
@@ -543,3 +554,63 @@
   }
 }
 
+
+.logo-wrapper{
+  .logo-circle-fill{
+    
+    &{
+      path{
+        // fill: red;
+        fill-opacity: .2;
+        animation: colorFill 5s infinite ;
+        // timing-function delay direction fill-mode
+      }
+    }
+  }
+  .logo-circle-gray{
+    &{
+      path{
+        // fill: red;
+        fill-opacity: .2;
+        animation: colorGray 5s infinite 10s;
+        // animation-delay: 6s;
+        // timing-function delay direction fill-mode
+        
+      }
+    }
+  }
+  @keyframes colorGray {
+    0%{
+      fill-opacity: .2;
+    }
+    50%{
+      fill-opacity: 1;
+    }
+    100%{
+      fill-opacity: .2;
+    }
+  }
+  @keyframes colorFill {
+    0%{
+      fill-opacity: 1;
+    }
+    50%{
+      fill-opacity: .2;
+    }
+    100%{
+      fill-opacity: 1;
+    }
+  }
+}
+
+.questions-accordion{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  @media (max-width: 740px) {
+    &{
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+  }
+}

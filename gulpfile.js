@@ -30,7 +30,6 @@ let path = {
 	},
 	clean: "./" + project_folder + "/"
 }
-
 let { src, dest } = require('gulp'),
 	gulp = require('gulp'),
 	browsersync = require("browser-sync").create(),
@@ -47,7 +46,8 @@ let { src, dest } = require('gulp'),
 	ttf2woff = require('gulp-ttf2woff'),
 	ttf2woff2 = require('gulp-ttf2woff2'),
 	fonter = require('gulp-fonter'),
-	deploy = require('gulp-gh-pages');
+	// deploy = require('gulp-gh-pages');
+	ghPages = require('gulp-gh-pages');
 
 function browserSync(done) {
 	browsersync.init({
@@ -160,10 +160,17 @@ gulp.task('svgSprite', function () {
 		.pipe(dest(path.build.img))
 })
 
-gulp.task('deploy', function () {
-	return gulp.src("./fin/**/*")
-	  .pipe(deploy())
- });
+gulp.task('deploy', function() {
+  return gulp.src('fin/**/*')
+    .pipe(ghPages());
+});
+
+// gulp.task('deploy', function () {
+// 	return gulp.src("./fin/**/*")
+// 	  .pipe(ghPages())
+// 	// return gulp.src('fin/**/*').pipe(gulp.dest('.publish'));
+//  });
+
 
 function cb() {
 
