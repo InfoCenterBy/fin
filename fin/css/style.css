@@ -734,8 +734,8 @@ body {
 
 .logo-wrapper .logo-circle-gray path {
   fill-opacity: 0.2;
-  -webkit-animation: colorGray 5s infinite 10s;
-          animation: colorGray 5s infinite 10s;
+  -webkit-animation: colorGray 5s infinite;
+          animation: colorGray 5s infinite;
 }
 
 @-webkit-keyframes colorGray {
