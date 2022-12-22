@@ -44,6 +44,7 @@ body {
   background-color: var(--color-white-bg);
   color: $mainColor;
   font-feature-settings: 'pnum' on, 'lnum' on;
+  scroll-behavior: smooth;
 }
 .lock body {
   overflow: hidden;

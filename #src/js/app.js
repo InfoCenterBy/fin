@@ -215,6 +215,36 @@ function uploadFile(target) {
   document.getElementById("file-name").innerHTML = target.files[0].name;
 }
 
+let scrollup = document.getElementById("scrollup");
+window.onscroll = function () {
+  scrollFunction();
+};
+function scrollFunction() {
+  if (
+  document.body.scrollTop > 100 ||
+  document.documentElement.scrollTop > 100
+  ) {
+    scrollup.style.display = "flex";
+    setTimeout(()=>{
+      scrollup.style.opacity = 1;
+      scrollup.style.visibility = "visible";
+    },300)
+  } else {
+    scrollup.style.display = "none";
+    setTimeout(()=>{
+      scrollup.style.opacity = 0;
+      scrollup.style.visibility = "hidden";
+    },300)
+    
+  }
+  }
+
+scrollup.addEventListener("click", backToTop);
+
+function backToTop() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+}
 
 
 

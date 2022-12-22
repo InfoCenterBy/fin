@@ -556,6 +556,10 @@
 
 
 .logo-wrapper{
+  .test{
+    position: absolute;
+    outline: 1px solid red;
+  }
   .logo-circle-fill{
     
     &{
@@ -564,6 +568,19 @@
         fill-opacity: .2;
         animation: colorFill 5s infinite ;
         // timing-function delay direction fill-mode
+      }
+      g{
+        path{
+          // animation: iconGray 5s infinite;
+        }
+        
+      }
+      defs{
+        clipPath{
+          rect{
+            // animation: iconGray 5s infinite;
+          }
+        }
       }
     }
   }
@@ -601,6 +618,21 @@
       fill-opacity: 1;
     }
   }
+  @keyframes iconGray {
+    0%{
+      fill: #393185;
+      stroke: #393185;
+    }
+    50%{
+      fill: white;
+      stroke: white;
+      
+    }
+    100%{
+      fill: #393185;
+      stroke: #393185;
+    }
+  }
 }
 
 .questions-accordion{
@@ -612,5 +644,44 @@
       grid-template-columns: 1fr;
       justify-content: center;
     }
+  }
+}
+
+.scrollup {
+  width: 45px;
+  height: 45px;
+  opacity: 0.9;
+  position: fixed;
+  bottom: 12vh;
+  right: 10vw;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  background: var(--color-violet);
+  transition: all ease-in 0.3s;
+  z-index: 10;
+  border: 1px solid var(--color-white);
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  .arrow {
+    border: solid var(--color-white);
+    border-width: 0 4px 4px 0;
+    border-radius: 1px;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(-135deg);
+    // color: var(--color-white);
+    // font-size: 30px;
+  }
+  &:hover{
+    background: var(--color-white);
+    border: 1px solid var(--color-violet);
+  }
+  &:hover .arrow{
+    border: solid var(--color-violet);
+    border-width: 0 5px 5px 0;
+    color: var(--color-violet);
   }
 }

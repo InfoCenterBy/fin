@@ -119,6 +119,7 @@ body {
   color: var(--color-black);
   -webkit-font-feature-settings: "pnum" on, "lnum" on;
           font-feature-settings: "pnum" on, "lnum" on;
+  scroll-behavior: smooth;
 }
 
 .lock body {
@@ -726,6 +727,11 @@ body {
   width: 100%;
 }
 
+.logo-wrapper .test {
+  position: absolute;
+  outline: 1px solid red;
+}
+
 .logo-wrapper .logo-circle-fill path {
   fill-opacity: 0.2;
   -webkit-animation: colorFill 5s infinite;
@@ -794,10 +800,92 @@ body {
   }
 }
 
+@-webkit-keyframes iconGray {
+  0% {
+    fill: #393185;
+    stroke: #393185;
+  }
+
+  50% {
+    fill: white;
+    stroke: white;
+  }
+
+  100% {
+    fill: #393185;
+    stroke: #393185;
+  }
+}
+
+@keyframes iconGray {
+  0% {
+    fill: #393185;
+    stroke: #393185;
+  }
+
+  50% {
+    fill: white;
+    stroke: white;
+  }
+
+  100% {
+    fill: #393185;
+    stroke: #393185;
+  }
+}
+
 .questions-accordion {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+}
+
+.scrollup {
+  width: 45px;
+  height: 45px;
+  opacity: 0.9;
+  position: fixed;
+  bottom: 12vh;
+  right: 10vw;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  background: var(--color-violet);
+  -webkit-transition: all ease-in 0.3s;
+  -o-transition: all ease-in 0.3s;
+  transition: all ease-in 0.3s;
+  z-index: 10;
+  border: 1px solid var(--color-white);
+  border-radius: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5px;
+}
+
+.scrollup .arrow {
+  border: solid var(--color-white);
+  border-width: 0 4px 4px 0;
+  border-radius: 1px;
+  display: inline-block;
+  padding: 4px;
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.scrollup:hover {
+  background: var(--color-white);
+  border: 1px solid var(--color-violet);
+}
+
+.scrollup:hover .arrow {
+  border: solid var(--color-violet);
+  border-width: 0 5px 5px 0;
+  color: var(--color-violet);
 }
 
 .header {
