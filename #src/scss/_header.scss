@@ -46,6 +46,24 @@
     }
   }
 
+  &__social{
+    width: 100%;
+    li{
+      list-style: none;
+    }
+    display: none;
+    .social-links{
+      padding-left: 0;
+      width: 100% !important;
+    }
+    &{
+      @media (max-width:990px) {
+        display: flex;
+        align-items: flex-start;
+      }
+    }
+  }
+
   // .header__consultation
   &__consultation {
     padding: 0px 0px 0px 40px;
@@ -119,7 +137,6 @@
       padding: 20px 0px 0px 0px;
       border-left: none;
       border-top: 1px solid var(--color-white);
-
       a {
         font-size: 18px;
         color: var(--color-white);
@@ -146,6 +163,22 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  &__services-sub{
+    display: none !important;
+    &{
+      @media (max-width: 990px) {
+        display: flex !important;
+      }
+    }
+  }
+  &__services{
+    display: flex !important;
+    &{
+      @media (max-width: 990px) {
+        display: none !important;
+      }
+    }
+  }
 
   > li {
     margin: 0px 0px 30px 0px;
