@@ -2001,6 +2001,7 @@ body {
   .menu-header .hover-menu:hover > .submenu-header {
     opacity: 1;
     visibility: visible;
+    z-index: 100;
   }
 
   .menu-header .hover-menu:hover .menu-header__link {
@@ -2024,7 +2025,7 @@ body {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.2);
-    z-index: 0;
+    z-index: 80;
     pointer-events: none;
     height: 100vh;
   }
