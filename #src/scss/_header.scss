@@ -42,6 +42,7 @@
       
       &:hover {
         color: var(--color-gray);
+        
       }
     }
   }
@@ -219,6 +220,9 @@
     }
     // .menu-header__item
     &__item {
+      
+    }
+    .hover-menu{
       &:hover {
         > .submenu-header {
           opacity: 1;
@@ -227,7 +231,6 @@
 
         .menu-header__link {
           color: var(--color-gray);
-
           &:after {
             width: 100%;
           }
@@ -339,6 +342,14 @@
   }
   // .submenu-header__section
   &__section {
+    .about-submenu{
+      display: none;
+      &{
+        @media (max-width: 992px) {
+          display: flex;
+        }
+      }
+    }
   }
 
   // .submenu-header__title

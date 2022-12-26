@@ -247,4 +247,17 @@ document.documentElement.scrollTop = 0;
 }
 
 
+let link = document.querySelectorAll(".submenu-header__link")
+
+for(let i = link.length - 1; i >= 0; i-- ){
+  link[i].addEventListener('click', ()=>{
+    document.querySelector(".menu-header__item").classList.remove("hover-menu");
+    setTimeout(()=>{
+      document.querySelector(".menu-header__item").classList.add("hover-menu");
+    },400)
+    // console.log()
+  }, false)
+}
+
+
 
