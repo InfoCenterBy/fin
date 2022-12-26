@@ -1729,14 +1729,6 @@ body {
   display: none;
 }
 
-.about .about-img-main:hover img:nth-child(1) {
-  display: none;
-}
-
-.about .about-img-main:hover img:nth-child(2) {
-  display: block;
-}
-
 .team-swiper .swiper-button-prev,
 .team-swiper .swiper-button-next {
   color: var(--color-white);
