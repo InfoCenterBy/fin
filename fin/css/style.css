@@ -891,6 +891,7 @@ body {
 .header {
   background-color: var(--color-violet);
   position: relative;
+  z-index: 999999;
 }
 
 .header__body {
@@ -1486,6 +1487,7 @@ body {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  margin-top: 82px !important;
 }
 
 .cursor {

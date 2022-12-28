@@ -446,10 +446,10 @@ for(let i = link.length - 1; i >= 0; i-- ){
     document.querySelector(".menu-header__item").classList.remove("hover-menu");
     setTimeout(()=>{
       document.querySelector(".menu-header__item").classList.add("hover-menu");
-    },400)
-    // console.log()
+    },1000)
   }, false)
 }
+
 
 
 
