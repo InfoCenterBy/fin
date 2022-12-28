@@ -738,6 +738,16 @@ body {
           animation: colorFill 5s infinite;
 }
 
+.logo-wrapper .logo-circle-fill rect {
+  -webkit-animation: colorFill 5s infinite;
+          animation: colorFill 5s infinite;
+}
+
+.logo-wrapper .logo-circle-fill g path {
+  -webkit-animation: iconGray 5s infinite;
+          animation: iconGray 5s infinite;
+}
+
 .logo-wrapper .logo-circle-gray path {
   fill-opacity: 0.2;
   -webkit-animation: colorGray 5s infinite;
@@ -1978,6 +1988,26 @@ body {
   cursor: pointer;
 }
 
+.feedback .feedback-form {
+  padding: 25px 0px 0px 0px;
+}
+
+.feedback .feedback-img {
+  border-radius: 0px 20px 20px 20px;
+  max-width: 439px;
+  width: 100%;
+  max-height: 475px;
+  height: 100%;
+  background: url("../img/main-page/feedback-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -150px;
+}
+
+.feedback .main-content__text {
+  margin-top: 65px;
+}
+
 @media (min-width: 992px) {
   .menu-header {
     display: -webkit-box;
@@ -2529,6 +2559,16 @@ body {
 @media (max-width: 780px) {
   .services-main .services-block .link-all {
     opacity: 1;
+  }
+}
+
+@media (max-width: 765px) {
+  .feedback .feedback-img {
+    display: none;
+  }
+
+  .feedback .main-content__text {
+    margin-top: 0px;
   }
 }
 

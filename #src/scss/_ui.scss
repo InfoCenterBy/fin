@@ -569,9 +569,13 @@
         animation: colorFill 5s infinite ;
         // timing-function delay direction fill-mode
       }
+      rect{
+        // fill-opacity: .2;
+        animation: colorFill 5s infinite ;
+      }
       g{
         path{
-          // animation: iconGray 5s infinite;
+          animation: iconGray 5s infinite;
         }
         
       }

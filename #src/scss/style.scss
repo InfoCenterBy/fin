@@ -546,6 +546,32 @@ body {
 }
 }
 
+.feedback{
+  .feedback-form {
+    padding: 25px 0px 0px 0px;
+  }
+  .feedback-img{
+    border-radius: 0px 20px 20px 20px;
+    max-width: 439px;
+    width: 100%;
+    max-height: 475px;
+    height: 100%;
+    background: url("../img/main-page/feedback-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -150px;
+    @media (max-width: 765px) {
+      display: none;
+    }
+  }
+  .main-content__text{
+    margin-top: 65px;
+    @media (max-width: 765px) {
+      margin-top: 0px;
+    }
+  }
+}
+
 
 // .test{
 //   clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
