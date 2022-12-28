@@ -215,18 +215,18 @@
     flex-direction: row;
     background: var(--color-violet-gray);
     border-radius: 0px 50px;
-    @include adaptiv-value("max-height", 315, 698, 1);
+    // @include adaptiv-value("max-height", 315, 798, 1);
     @include adaptiv-value("max-width", 1367,329, 1);
     .services-tabs{
       display: flex;
       flex-direction: column;
       background: var(--color-violet);
       border-radius: 0px 50px;
-      padding: 35px 0px;
+      padding: 35px 32px;
       max-width: 358px;
       width: 100%;
       align-items: flex-start;
-      @include adaptiv-value("max-height", 315, 698, 1);;
+      // @include adaptiv-value("max-height", 315, 798, 1);
       .button {
         display: flex;
         color: var(--color-white);
@@ -234,10 +234,13 @@
         font-weight: 500;
         border: 1px solid var(--color-white);
         background-color: transparent;
-        margin: 5px 32px;
+        margin: 5px 0px;
         padding: 10px 20px;
         min-width: 140px;
+        max-width: 100%;
         @include adaptiv-value("font-size", 16, 14, 1);
+        white-space: pre-wrap;
+        text-align: left;
         // max-width: 294px;
         // min-width: 154px;
         justify-content: flex-start;
@@ -263,11 +266,17 @@
       @include adaptiv-value("margin-top", 30, 25, 1);
       display: flex;
       align-items: center;
+      width: 100%;
       .content {
         display: none;
         padding-bottom: 40px;
-        p{
+        ul{
+          text-align: left;
+          li{
+            white-space: pre-wrap;
+          }
           max-width: 814px;
+          width: 100%;
           @include adaptiv-value("font-size", 18, 13, 1);
         }
         .service-links-scope{
