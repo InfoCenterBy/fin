@@ -270,6 +270,8 @@
       .content {
         display: none;
         padding-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 15px;
         ul{
           text-align: left;
           li{
@@ -347,6 +349,13 @@
   }
 
   &__text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+    .reviews__text-content{
+      flex: 1 0 auto;
+    }
     p{
       color: var(--color-black);
       cursor:text;
@@ -360,6 +369,9 @@
     //   max-height: 300px;
     //   text-overflow: ellipsis;
     // }
+    .reviews__text-links{
+      flex: 0 0 auto;
+    }
   }
   &__title{
     color: var(--color-gray);
