@@ -371,6 +371,8 @@
     display: none;
   }
 
+  
+
   // .submenu-header__link
   &__link {
   }
@@ -449,6 +451,7 @@
   }
 }
 
+
 .button-menu {
   display: none;
 
@@ -522,5 +525,29 @@
 .sub-menu-open {
   .header__nav {
       overflow: hidden;
+  }
+}
+
+
+.about-list.submenu-header__list{
+  display: block;
+  li{
+    list-style: none;
+    padding-left: 0 !important;
+  }
+  &{
+    @media (max-width: 990px) {
+      padding-left: 0 !important;
+      li{
+        margin-bottom: 30px;
+      }
+      a{
+        font-size: 20px;
+        color: var(--color-white);
+        &:hover{
+          color: var(--color-gray);
+        }
+      }      
+    }
   }
 }
