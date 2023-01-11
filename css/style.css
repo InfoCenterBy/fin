@@ -619,6 +619,11 @@ body {
   max-width: 671px;
 }
 
+.services .reviews__content .link-all {
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .services h2,
 .services h3 {
   font-weight: 600;
@@ -1167,6 +1172,15 @@ body {
 
 .sub-menu-open .header__nav {
   overflow: hidden;
+}
+
+.about-list.submenu-header__list {
+  display: block;
+}
+
+.about-list.submenu-header__list li {
+  list-style: none;
+  padding-left: 0 !important;
 }
 
 .footer {
@@ -2513,6 +2527,23 @@ body {
 
   .menu-header__services {
     display: none !important;
+  }
+
+  .about-list.submenu-header__list {
+    padding-left: 0 !important;
+  }
+
+  .about-list.submenu-header__list li {
+    margin-bottom: 30px;
+  }
+
+  .about-list.submenu-header__list a {
+    font-size: 20px;
+    color: var(--color-white);
+  }
+
+  .about-list.submenu-header__list a:hover {
+    color: var(--color-gray);
   }
 }
 
