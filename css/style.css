@@ -1845,6 +1845,14 @@ body {
   color: var(--color-black);
 }
 
+.contact-block .contact-info a:hover {
+  color: var(--color-violet-light);
+}
+
+.contact-block .contact-info .social-links a svg:hover path {
+  fill: var(--color-violet-light);
+}
+
 .contact-map {
   max-width: 630px;
   width: 100%;
