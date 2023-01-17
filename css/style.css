@@ -2064,6 +2064,17 @@ body {
   margin-top: 65px;
 }
 
+.img-prev {
+  opacity: 0.5;
+  -webkit-transition: all ease-in 0.3s;
+  -o-transition: all ease-in 0.3s;
+  transition: all ease-in 0.3s;
+}
+
+.img-prev:hover {
+  opacity: 1;
+}
+
 @media (min-width: 992px) {
   .menu-header {
     display: -webkit-box;
