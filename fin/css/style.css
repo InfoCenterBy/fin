@@ -1845,6 +1845,14 @@ body {
   color: var(--color-black);
 }
 
+.contact-block .contact-info a:hover {
+  color: var(--color-violet-light);
+}
+
+.contact-block .contact-info .social-links a svg:hover path {
+  fill: var(--color-violet-light);
+}
+
 .contact-map {
   max-width: 630px;
   width: 100%;
@@ -2054,6 +2062,17 @@ body {
 
 .feedback .main-content__text {
   margin-top: 65px;
+}
+
+.img-prev {
+  opacity: 0.5;
+  -webkit-transition: all ease-in 0.3s;
+  -o-transition: all ease-in 0.3s;
+  transition: all ease-in 0.3s;
+}
+
+.img-prev:hover {
+  opacity: 1;
 }
 
 @media (min-width: 992px) {

@@ -352,7 +352,19 @@ body {
       }
     }
     a{
-      color: var(--color-black)
+      color: var(--color-black);
+      &:hover{
+        color: var(--color-violet-light);
+      }
+    }
+    .social-links{
+      a{
+        svg:hover{
+          path{
+            fill: var(--color-violet-light)
+          }
+        }
+      }
     }
   }
   
@@ -657,3 +669,10 @@ body {
 //   }
 // }
 
+.img-prev{
+  opacity: .5;
+  transition: all ease-in .3s;
+  &:hover{
+    opacity: 1;
+  }
+}
