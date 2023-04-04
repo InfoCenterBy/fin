@@ -935,6 +935,70 @@ body {
   border: solid var(--color-violet);
   border-width: 0 5px 5px 0;
   color: var(--color-violet);
+  color: rgba(57, 49, 133, 0.431372549);
+}
+
+#cookieModal .item-accordion__button_icon {
+  margin-left: 0;
+}
+
+#cookieModal .form-check-input:checked {
+  background-color: var(--color-violet);
+  border-color: var(--color-violet);
+}
+
+#cookieModal .form-check-input:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(57, 49, 133, 0.25);
+          box-shadow: 0 0 0 0.25rem rgba(57, 49, 133, 0.25);
+  border-color: var(--color-violet);
+}
+
+#cookieModal .form-check-input {
+  border-color: var(--color-gray);
+}
+
+#cookieModal .form-switch .form-check-input:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23393185'/%3e%3c/svg%3e");
+}
+
+#cookieModal .form-check-input:focus:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='white'/%3e%3c/svg%3e");
+}
+
+#cookieModal .item-accordion__button_text {
+  font-size: 18px;
+}
+
+#cookieModal .cookies-close .button {
+  font-size: 18px;
+  line-height: 21px;
+  padding: 10px 30px;
+}
+
+#cookieModal .item-accordion__button {
+  padding-right: 0;
+}
+
+#cookieModal .item-accordion h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 20px;
+}
+
+#cookieModal .form-switch input {
+  font-size: 20px;
+}
+
+#cookieModal .item-accordion__button_icon {
+  margin-top: 0;
 }
 
 .header {
@@ -1873,7 +1937,6 @@ body {
 }
 
 .cookies .button {
-  max-width: 155px;
   font-weight: 500;
   font-size: 15px;
   padding: 10px 30px;
@@ -1902,8 +1965,18 @@ body {
   text-align: left;
 }
 
+.cookies .cookies-main span {
+  cursor: text;
+}
+
 .cookies .cookies-main a {
-  color: var(--color-violet-light);
+  color: var(--color-violet);
+  text-decoration: underline;
+}
+
+.cookies .cookies-main a:hover {
+  color: var(--color-violet);
+  text-decoration: underline;
 }
 
 .services-main .services-block {
@@ -2223,6 +2296,12 @@ body {
   }
 }
 
+@media (min-width: 1100px) {
+  .cookies .cookies-close .button {
+    max-width: 137px;
+  }
+}
+
 @media (max-width: 1390px) {
   .section {
     margin-bottom: calc(50px + 80 * ((100vw - 320px) / 1070));
@@ -2283,6 +2362,14 @@ body {
 
   .benefits__card > div span {
     font-size: calc(16px + 4 * ((100vw - 320px) / 1070));
+  }
+
+  #cookieModal .item-accordion__button_text {
+    font-size: calc(14px + 4 * ((100vw - 320px) / 1070));
+  }
+
+  #cookieModal .cookies-close .button {
+    font-size: calc(14px + 4 * ((100vw - 320px) / 1070));
   }
 
   .main-block {
@@ -2662,6 +2749,20 @@ body {
 @media (max-width: 640px) {
   .reviews__wrapper {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  #cookieModal .item-accordion__button {
+    padding: 10px 8px;
+  }
+
+  #cookieModal .item-accordion h4 {
+    padding-right: 5px;
+  }
+
+  #cookieModal .form-switch input {
+    font-size: 14px;
   }
 }
 

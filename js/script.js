@@ -402,34 +402,44 @@ function getCookie(name) {
   return null;
 }
 
+$("#cookieAccordion").click(function(e) {
+  e.stopPropagation();
+});
 
 function uploadFile(target) {
   document.getElementById("file-name").innerHTML = target.files[0].name;
 }
 
-let scrollup = document.getElementById("scrollup");
+
+  let scrollup = document.getElementById("scrollup");
 window.onscroll = function () {
   scrollFunction();
 };
 function scrollFunction() {
-  if (
-  document.body.scrollTop > 100 ||
-  document.documentElement.scrollTop > 100
-  ) {
-    scrollup.style.display = "flex";
-    setTimeout(()=>{
-      scrollup.style.opacity = 1;
-      scrollup.style.visibility = "visible";
-    },300)
-  } else {
-    scrollup.style.display = "none";
-    setTimeout(()=>{
-      scrollup.style.opacity = 0;
-      scrollup.style.visibility = "hidden";
-    },300)
-    
+  try{
+    if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+    ) {
+      scrollup.style.display = "flex";
+      setTimeout(()=>{
+        scrollup.style.opacity = 1;
+        scrollup.style.visibility = "visible";
+      },300)
+    } else {
+      scrollup.style.display = "none";
+      setTimeout(()=>{
+        scrollup.style.opacity = 0;
+        scrollup.style.visibility = "hidden";
+      },300)
+      
+    }
+  }
+  catch(error){
+    console.log(error);
   }
   }
+
 
 scrollup.addEventListener("click", backToTop);
 
@@ -450,6 +460,10 @@ for(let i = link.length - 1; i >= 0; i-- ){
   }, false)
 }
 
+
+$(".form-switch").click(function(e) {
+  e.stopPropagation();
+});
 
 
 
