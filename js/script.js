@@ -402,13 +402,19 @@ function getCookie(name) {
   return null;
 }
 
-$("#cookieAccordion").click(function(e) {
-  e.stopPropagation();
-});
 
 function uploadFile(target) {
   document.getElementById("file-name").innerHTML = target.files[0].name;
 }
+
+//  hide alert and modal by btn
+document.querySelectorAll('#cookieModal .cookies-close .button').forEach(el=>{
+  el.addEventListener("click", ()=>{
+    $('#cookieModal').modal('hide');
+    $('#cookiesAlert').hide();
+  })
+})
+//  hide alert and modal by btn
 
 
   let scrollup = document.getElementById("scrollup");
@@ -460,10 +466,6 @@ for(let i = link.length - 1; i >= 0; i-- ){
   }, false)
 }
 
-
-$(".form-switch").click(function(e) {
-  e.stopPropagation();
-});
 
 
 
