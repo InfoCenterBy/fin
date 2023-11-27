@@ -398,7 +398,6 @@ body {
     // }
   }
   .button{
-    max-width: 155px;
     font-weight: 500;
     font-size: 15px;
     padding: 10px 30px;
@@ -416,14 +415,26 @@ body {
       align-items: center;
       justify-content: center;
       font-weight: 600;
+      @media (min-width:1100px) {
+        max-width: 137px;
+      }
     }
   }
   .cookies-main{
     text-align: left;
     // padding-right: 5px;
     // border-right: 1px solid var(--color-violet-light);
+    span{
+      cursor: text;
+    }
     a{
-      color:var(--color-violet-light);
+      color:var(--color-violet);
+      text-decoration: underline;
+      font-weight: 600;
+      &:hover{
+        color:var(--color-violet);
+        text-decoration: underline;
+      }
     }
   }
 }

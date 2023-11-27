@@ -215,29 +215,45 @@ function uploadFile(target) {
   document.getElementById("file-name").innerHTML = target.files[0].name;
 }
 
-let scrollup = document.getElementById("scrollup");
+//  hide alert and modal by btn
+document.querySelectorAll('#cookieModal .cookies-close .button').forEach(el=>{
+  el.addEventListener("click", ()=>{
+    $('#cookieModal').modal('hide');
+    $('#cookiesAlert').hide();
+  })
+})
+//  hide alert and modal by btn
+
+
+  let scrollup = document.getElementById("scrollup");
 window.onscroll = function () {
   scrollFunction();
 };
 function scrollFunction() {
-  if (
-  document.body.scrollTop > 100 ||
-  document.documentElement.scrollTop > 100
-  ) {
-    scrollup.style.display = "flex";
-    setTimeout(()=>{
-      scrollup.style.opacity = 1;
-      scrollup.style.visibility = "visible";
-    },300)
-  } else {
-    scrollup.style.display = "none";
-    setTimeout(()=>{
-      scrollup.style.opacity = 0;
-      scrollup.style.visibility = "hidden";
-    },300)
-    
+  try{
+    if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+    ) {
+      scrollup.style.display = "flex";
+      setTimeout(()=>{
+        scrollup.style.opacity = 1;
+        scrollup.style.visibility = "visible";
+      },300)
+    } else {
+      scrollup.style.display = "none";
+      setTimeout(()=>{
+        scrollup.style.opacity = 0;
+        scrollup.style.visibility = "hidden";
+      },300)
+      
+    }
+  }
+  catch(error){
+    console.log(error);
   }
   }
+
 
 scrollup.addEventListener("click", backToTop);
 
