@@ -1037,6 +1037,27 @@ body {
   border-radius: 5px;
 }
 
+.color-violet {
+  color: var(--color-violet) !important;
+}
+
+.fs-22 {
+  font-size: 22px;
+}
+
+.qr-code {
+  overflow: hidden;
+}
+
+.qr-code img {
+  width: 100%;
+}
+
+.qr-modal {
+  max-width: 91px;
+  max-height: 91px;
+}
+
 .header {
   background-color: var(--color-violet);
   position: relative;
