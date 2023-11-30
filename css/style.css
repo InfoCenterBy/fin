@@ -1001,6 +1001,42 @@ body {
   margin-top: 0;
 }
 
+.label-form {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--color-violet);
+}
+
+.accent-block {
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 600;
+  color: var(--color-violet);
+  padding: 16px 0;
+  border-radius: 20px;
+  background-color: rgba(57, 49, 133, 0.03);
+}
+
+.form-control:focus {
+  border: 1px solid var(--color-violet-light);
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(57, 49, 133, 0.25);
+          box-shadow: 0 0 0 0.25rem rgba(57, 49, 133, 0.25);
+}
+
+.counseling-form .input input {
+  background-color: var(--color-white-bg);
+}
+
+.counseling-form textarea,
+.counseling-form select {
+  width: 100%;
+  padding: 13px 10px;
+  border: 1px solid var(--color-gray);
+  background-color: var(--color-white-bg);
+  border-radius: 5px;
+}
+
 .header {
   background-color: var(--color-violet);
   position: relative;
@@ -1972,6 +2008,7 @@ body {
 .cookies .cookies-main a {
   color: var(--color-violet);
   text-decoration: underline;
+  font-weight: 600;
 }
 
 .cookies .cookies-main a:hover {
@@ -2759,10 +2796,6 @@ body {
 
   #cookieModal .item-accordion h4 {
     padding-right: 5px;
-  }
-
-  #cookieModal .form-switch input {
-    font-size: 14px;
   }
 }
 
