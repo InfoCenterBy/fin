@@ -2239,6 +2239,14 @@ body {
   opacity: 1;
 }
 
+.bg-gray {
+  background-color: rgba(57, 49, 133, 0.03);
+}
+
+.border-20 {
+  border-radius: 20px;
+}
+
 @media (min-width: 992px) {
   .menu-header {
     display: -webkit-box;
