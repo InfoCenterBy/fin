@@ -2788,6 +2788,12 @@ body {
   }
 }
 
+@media (max-width: 960px) {
+  .document-block {
+    padding: 12px;
+  }
+}
+
 @media (max-width: 920px) {
   .pay-banner {
     padding: 12px 16px;
